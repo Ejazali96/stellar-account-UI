@@ -1,0 +1,50 @@
+<!-- Page Header -->
+<section class="page-header">
+    <div>
+        <p class="page-category">Products & devices</p>
+        <h1 class="page-title">All your Stellar apps in one place</h1>
+        <p class="page-description">
+            See which Stellar products are active on your account, how many devices they use and jump straight into
+            managing them.
+        </p>
+    </div>
+    <div class="header-actions">
+        <div class="connection-badge">
+            <span class="badge-dot badge-dot-success"></span>
+            <span>{{ connectedProductsCount }} Stellar products connected</span>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products-section">
+    <div class="section-header">
+        <h2 class="section-title">Stellar products</h2>
+        <p class="section-subtitle">Manage subscriptions, devices and security for each app.</p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+        <app-product-card *ngFor="let product of products$ | async" [product]="product"
+            (actionClick)="onProductAction($event)">
+        </app-product-card>
+
+        <!-- Placeholder Card -->
+        <article class="card card-placeholder">
+            <div class="card-content">
+                <h3 class="card-title">More Stellar tools coming soon</h3>
+                <p class="card-description">
+                    Future products like Stellar Mail or Stellar Drive will appear here automatically when they are
+                    added to
+                    your account.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Footer Note -->
+<section class="footer-note">
+    <p>Every Stellar app is built with the same security-first philosophy and Swiss privacy guarantees.</p>
+    <p>Stellar Security · Switzerland · Zero-knowledge by design.</p>
+</section>

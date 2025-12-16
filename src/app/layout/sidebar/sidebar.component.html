@@ -1,0 +1,52 @@
+<aside class="sidebar hidden-mobile">
+    <div class="sidebar-content">
+        <!-- Logo and Branding -->
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <span class="logo-emoji">⚡</span>
+                </div>
+            </div>
+            <div>
+                <p class="brand-subtitle">Stellar Security</p>
+                <p class="brand-title">Stellar Account</p>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <a *ngFor="let item of navigationItems" [routerLink]="item.route" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: false}" class="nav-link">
+                <span>{{ item.icon }}</span>
+                <span>{{ item.label }}</span>
+            </a>
+        </nav>
+
+        <!-- Info Box -->
+        <div class="info-box">
+            <p class="info-title">
+                <span class="info-badge">✚</span>
+                One Stellar ID
+            </p>
+            <p class="info-text">
+                All your Stellar apps share the same secure Stellar ID across phone, desktop and cloud.
+            </p>
+        </div>
+    </div>
+
+    <!-- User Profile Footer -->
+    <div class="sidebar-footer">
+        <div class="flex items-center gap-2">
+            <div class="avatar avatar-sm">
+                {{ user?.initials }}
+            </div>
+            <div class="user-info">
+                <p class="user-name">{{ user?.name }}</p>
+                <p class="user-email">{{ user?.email }}</p>
+            </div>
+        </div>
+        <button class="sign-out-btn" (click)="onSignOut()">
+            Sign out
+        </button>
+    </div>
+</aside>

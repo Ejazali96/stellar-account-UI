@@ -1,0 +1,15 @@
+<div class="app-container">
+  <!-- Sidebar (Desktop) -->
+  <app-sidebar [navigationItems]="(navigationItems$ | async) || []" [user]="(currentUser$ | async) || null"
+    (signOut)="onSignOut()">
+  </app-sidebar>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Mobile Header -->
+    <app-header></app-header>
+
+    <!-- Page Content -->
+    <router-outlet></router-outlet>
+  </main>
+</div>

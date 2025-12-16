@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stellar · Products & Devices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-slate-50 text-slate-900">
+  <div class="min-h-screen flex bg-gradient-to-br from-sky-500/10 via-sky-500/5 to-indigo-500/10">
+
+    <!-- SIDEBAR -->
+    <aside class="hidden lg:flex w-64 xl:w-72 flex-col justify-between border-r border-sky-600/15 bg-gradient-to-b from-sky-600 via-sky-700 to-slate-900 text-sky-50 shadow-2xl shadow-sky-500/40">
+      <div class="px-6 pt-6 pb-4">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="h-9 w-9 rounded-2xl bg-white/10 border border-white/40 flex items-center justify-center">
+            <span class="text-white font-semibold text-lg">⚡</span>
+          </div>
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.25em] text-sky-100/90">Stellar Security</p>
+            <p class="font-semibold text-sm text-white">Stellar Account</p>
+          </div>
+        </div>
+
+        <nav class="space-y-1 text-sm">
+          <a href="#" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sky-100/80 hover:bg-white/5">
+            <span>🏠</span>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 font-medium text-white">
+            <span>🧩</span>
+            <span>Products &amp; devices</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sky-100/80 hover:bg-white/5">
+            <span>🔐</span>
+            <span>Security &amp; 2FA</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sky-100/80 hover:bg-white/5">
+            <span>💳</span>
+            <span>Billing &amp; invoices</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sky-100/80 hover:bg-white/5">
+            <span>⚙️</span>
+            <span>Settings</span>
+          </a>
+          <a href="#" class="flex items-center gap-2 rounded-xl px-3 py-2 text-sky-100/80 hover:bg-white/5">
+            <span>💬</span>
+            <span>Support</span>
+          </a>
+        </nav>
+
+        <div class="mt-8 rounded-2xl border border-sky-200/25 bg-white/5 px-3 py-3 text-[11px] leading-relaxed">
+          <p class="flex items-center gap-2 font-semibold mb-1">
+            <span class="inline-flex items-center justify-center h-5 rounded-full bg-white text-red-600 px-2 text-[10px]">
+              ✚
+            </span>
+            One Stellar ID
+          </p>
+          <p class="text-sky-100/90">
+            All your Stellar apps share the same secure Stellar ID across phone, desktop and cloud.
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-sky-200/20 px-6 py-4 flex items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-full bg-white/15 flex items-center justify-center text-[13px] font-semibold">
+            BC
+          </div>
+          <div class="leading-tight">
+            <p class="font-medium text-sky-50">Blerim Cazimi</p>
+            <p class="text-sky-100/80 text-[11px]">blerim@example.com</p>
+          </div>
+        </div>
+        <button class="text-[11px] font-medium text-sky-100/90 hover:text-red-200">
+          Sign out
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="flex-1 flex flex-col px-4 sm:px-6 lg:px-8 py-5 space-y-5">
+
+      <!-- Topbar (mobile) -->
+      <header class="flex items-center justify-between lg:hidden mb-2">
+        <div class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-2xl bg-sky-500/10 border border-sky-500/40 flex items-center justify-center">
+            <span class="text-sky-600 font-semibold text-base">⚡</span>
+          </div>
+          <span class="text-sm font-semibold text-slate-900">Stellar Account</span>
+        </div>
+        <span class="inline-flex items-center rounded-full border border-red-500/40 bg-red-500/5 px-3 py-1 text-[11px] font-medium text-red-600 gap-1.5">
+          <span class="text-xs">✚</span> Swiss privacy
+        </span>
+      </header>
+
+      <!-- Header -->
+      <section class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mt-1">
+        <div>
+          <p class="text-xs font-medium uppercase tracking-[0.22em] text-slate-500 mb-1">
+            Products &amp; devices
+          </p>
+          <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight mb-1">
+            All your Stellar apps in one place
+          </h1>
+          <p class="text-sm text-slate-500 max-w-xl">
+            See which Stellar products are active on your account, how many devices they use and jump straight into managing them.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <div class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-medium text-slate-600 gap-1.5">
+            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            <span>5 Stellar products connected</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products grid -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between gap-2">
+          <h2 class="text-sm font-semibold text-slate-900">Stellar products</h2>
+          <p class="text-xs text-slate-500">Manage subscriptions, devices and security for each app.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <!-- Stellar VPN -->
+          <article class="rounded-2xl bg-white border border-slate-200 shadow-sm px-4 py-4 flex flex-col gap-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-[11px] font-semibold text-sky-700 uppercase tracking-wide">Stellar VPN</p>
+                <p class="text-sm font-medium text-slate-900">Stellar VPN · Unlimited</p>
+                <p class="text-[11px] text-slate-500">
+                  Hide your location and browse privately across all your devices.
+                </p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-700 gap-1.5">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>
+                <span class="text-[11px] text-slate-500">3 / 5 devices</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-[11px]">
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Open VPN devices
+              </button>
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Manage subscription
+              </button>
+            </div>
+          </article>
+
+          <!-- Stellar Antivirus -->
+          <article class="rounded-2xl bg-white border border-slate-200 shadow-sm px-4 py-4 flex flex-col gap-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-[11px] font-semibold text-sky-700 uppercase tracking-wide">Stellar Antivirus</p>
+                <p class="text-sm font-medium text-slate-900">Antivirus · 3 devices</p>
+                <p class="text-[11px] text-slate-500">
+                  Protect your Mac and Windows devices against malware and unwanted software.
+                </p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-700 gap-1.5">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>
+                <span class="text-[11px] text-slate-500">2 / 3 devices</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-[11px]">
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Open Antivirus dashboard
+              </button>
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Manage subscription
+              </button>
+            </div>
+          </article>
+
+          <!-- Stellar Private Notes -->
+          <article class="rounded-2xl bg-white border border-slate-200 shadow-sm px-4 py-4 flex flex-col gap-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-[11px] font-semibold text-sky-700 uppercase tracking-wide">Stellar Private Notes</p>
+                <p class="text-sm font-medium text-slate-900">Private Notes · Premium</p>
+                <p class="text-[11px] text-slate-500">
+                  Private, end-to-end encrypted notes and documents synced across your devices.
+                </p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-700 gap-1.5">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>
+                <span class="text-[11px] text-slate-500">Synced on 2 devices</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-[11px]">
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Open Private Notes
+              </button>
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Manage subscription
+              </button>
+            </div>
+          </article>
+
+          <!-- Stellar Protect -->
+          <article class="rounded-2xl bg-white border border-slate-200 shadow-sm px-4 py-4 flex flex-col gap-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-[11px] font-semibold text-sky-700 uppercase tracking-wide">Stellar Protect</p>
+                <p class="text-sm font-medium text-slate-900">Device Protect</p>
+                <p class="text-[11px] text-slate-500">
+                  Remote wipe, tamper detection and USB kill-switch for your Stellar devices.
+                </p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-700 gap-1.5">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  Enabled
+                </span>
+                <span class="text-[11px] text-slate-500">3 protected devices</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-[11px]">
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                Manage Protect rules
+              </button>
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-2.5 py-1 font-medium text-slate-700 hover:border-sky-400 hover:text-sky-700">
+                View devices
+              </button>
+            </div>
+          </article>
+
+          <!-- Stellar Secret -->
+          <article class="rounded-2xl bg-white border border-slate-200 shadow-sm px-4 py-4 flex flex-col gap-3">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-[11px] font-semibold text-sky-700 uppercase tracking-wide">Stellar Secret</p>
+                <p class="text-sm font-medium text-slate-900">One-time links</p>
+                <p class="text-[11px] text-slate-500">
+                  Create private links that disappear after they are opened. Perfect for passwords and sensitive details.
+                </p>
+              </div>
+              <div class="flex flex-col items-end gap-1">
+                <span class="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/40 px-2 py-0.5 text-[11px] text-emerald-700 gap-1.5">
+                  <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                  Active
+                </span>
+                <span class="text-[11px] text-slate-500">Uses Stellar ID</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 text-[11px]">
+              <button class="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1 font-medium text-sky-700 hover:border-sky-500">
+                Open Stellar Secret
+              </button>
+            </div>
+          </article>
+
+          <!-- Placeholder for future product -->
+          <article class="rounded-2xl border border-dashed border-slate-300 bg-slate-50/70 px-4 py-4 flex flex-col justify-center items-start gap-2 text-xs text-slate-500">
+            <p class="font-medium text-slate-700 text-sm">More Stellar tools coming soon</p>
+            <p>
+              Future products like Stellar Mail or Stellar Drive will appear here automatically when they are added to your account.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bottom note -->
+      <section class="pt-2 border-t border-slate-200/70 text-[11px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+        <p>Every Stellar app is built with the same security-first philosophy and Swiss privacy guarantees.</p>
+        <p>Stellar Security · Switzerland · Zero-knowledge by design.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
