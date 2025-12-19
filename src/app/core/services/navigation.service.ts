@@ -8,12 +8,12 @@ import { NavigationItem } from '../models/navigation.model';
 export class NavigationService {
     // Mock navigation items - can be made dynamic based on user permissions
     private mockNavigationItems: NavigationItem[] = [
-        { icon: '🏠', label: 'Dashboard', route: '/dashboard' },
-        { icon: '🧩', label: 'Products & devices', route: '/products' },
-        { icon: '🔐', label: 'Security & 2FA', route: '/security' },
-        { icon: '💳', label: 'Billing & invoices', route: '/billing' },
-        { icon: '⚙️', label: 'Settings', route: '/settings' },
-        { icon: '💬', label: 'Support', route: '/support' }
+        { icon: 'fa-solid fa-grip', label: 'Dashboard', route: '/dashboard' },
+        { icon: 'fa-solid fa-shield-virus', label: 'Antivirus', route: '/products' },
+        { icon: 'fa-solid fa-file-invoice-dollar', label: 'Billing', route: '/security' },
+        { icon: 'fa-solid fa-shield-halved', label: 'Security', route: '/billing' },
+        { icon: 'fa-solid fa-gear', label: 'Settings', route: '/settings' },
+        { icon: 'fa-solid fa-headset', label: 'Support', route: '/support' },
     ];
 
     constructor() { }
