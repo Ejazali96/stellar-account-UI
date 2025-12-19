@@ -6,7 +6,7 @@ import { ProductService } from '../../core/services/product.service';
 import { ProductCardComponent } from '../../shared/components/product-card/product-card.component';
 
 @Component({
-    selector: 'app-dashboard',
+    selector: 'app-dashboard', 
     standalone: true,
     imports: [CommonModule, ProductCardComponent],
     templateUrl: './dashboard.component.html',
