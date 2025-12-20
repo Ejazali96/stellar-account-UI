@@ -1,6 +1,13 @@
 :root {
   /* ===== COLOR PALETTE ===== */
 
+  /* Primary Brand Color - Main Theme */
+  --color-primary: #2761FC;
+  --color-primary-dark: #1E4DD8;
+  --color-primary-light: #4A7DFD;
+  --color-primary-lighter: #E8EFFE;
+  --color-primary-rgb: 39, 97, 252;
+
   /* Sky Colors */
   --color-sky-50: #f0f9ff;
   --color-sky-100: #e0f2fe;
@@ -175,8 +182,10 @@
   --z-index-tooltip: 60;
 
   /* ===== LAYOUT ===== */
-  --sidebar-width: 16rem;
-  /* 256px */
+  --sidebar-width: 16.5rem;
+  /* 264px */
+  --sidebar-width-collapsed: 4.5rem;
+  /* 72px */
   --sidebar-width-xl: 18rem;
   /* 288px */
   --max-width-xl: 36rem;
