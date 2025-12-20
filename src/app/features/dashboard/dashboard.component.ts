@@ -10,7 +10,7 @@ import { ProductCardComponent } from '../../shared/components/product-card/produ
     standalone: true,
     imports: [CommonModule, ProductCardComponent],
     templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+    styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
     products$!: Observable<Product[]>;

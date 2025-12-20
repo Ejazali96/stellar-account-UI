@@ -9,7 +9,7 @@ import { User } from '../../core/models/user.model';
     standalone: true,
     imports: [CommonModule, RouterModule],
     templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.css']
+    styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
     @Input() navigationItems: NavigationItem[] = [];

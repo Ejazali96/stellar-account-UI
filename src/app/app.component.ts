@@ -14,7 +14,7 @@ import { UserService } from './core/services/user.service';
   standalone: true,
   imports: [RouterOutlet, CommonModule, SidebarComponent, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'stellar-account';

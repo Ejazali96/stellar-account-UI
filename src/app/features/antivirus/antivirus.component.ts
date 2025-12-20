@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './antivirus.component.html',
-  styleUrl: './antivirus.component.css'
+  styleUrl: './antivirus.component.scss'
 })
 export class AntivirusComponent {
 

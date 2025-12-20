@@ -8,7 +8,7 @@ import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
     standalone: true,
     imports: [CommonModule, SafeHtmlPipe],
     templateUrl: './product-card.component.html',
-    styleUrls: ['./product-card.component.css']
+    styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
     @Input() product!: Product;
