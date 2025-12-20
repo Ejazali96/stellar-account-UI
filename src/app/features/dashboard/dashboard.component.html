@@ -1,50 +1,66 @@
-<!-- Page Header -->
-<section class="page-header">
-    <div>
-        <p class="page-category">Products & devices</p>
-        <h1 class="page-title">All your Stellar apps in one place</h1>
-        <p class="page-description">
-            See which Stellar products are active on your account, how many devices they use and jump straight into
-            managing them.
-        </p>
-    </div>
-    <div class="header-actions">
-        <div class="connection-badge">
-            <span class="badge-dot badge-dot-success"></span>
-            <span>{{ connectedProductsCount }} Stellar products connected</span>
-        </div>
-    </div>
-</section>
-
-<!-- Products Section -->
-<section class="products-section">
-    <div class="section-header">
-        <h2 class="section-title">Stellar products</h2>
-        <p class="section-subtitle">Manage subscriptions, devices and security for each app.</p>
-    </div>
-
-    <!-- Products Grid -->
-    <div class="products-grid">
-        <app-product-card *ngFor="let product of products$ | async" [product]="product"
-            (actionClick)="onProductAction($event)">
-        </app-product-card>
-
-        <!-- Placeholder Card -->
-        <article class="card card-placeholder">
-            <div class="card-content">
-                <h3 class="card-title">More Stellar tools coming soon</h3>
-                <p class="card-description">
-                    Future products like Stellar Mail or Stellar Drive will appear here automatically when they are
-                    added to
-                    your account.
-                </p>
+<!-- Dashboard Container -->
+<div class="dashboard-container">
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-breadcrumb">
+                <i class="fa-solid fa-cube"></i>
+                <span>{{ 'Products & devices' }}</span>
             </div>
-        </article>
-    </div>
-</section>
+            <h1 class="page-title">All your Stellar apps in one place</h1>
+            <p class="page-description">
+                See which Stellar products are active on your account, how many devices they use and jump straight into
+                managing them.
+            </p>
+        </div>
+        <div class="header-actions">
+            <div class="connection-badge">
+                <span class="badge-dot"></span>
+                <span>{{ connectedProductsCount }} Stellar products connected</span>
+            </div>
+        </div>
+    </header>
 
-<!-- Footer Note -->
-<section class="footer-note">
-    <p>Every Stellar app is built with the same security-first philosophy and Swiss privacy guarantees.</p>
-    <p>Stellar Security · Switzerland · Zero-knowledge by design.</p>
-</section>
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="section-header">
+            <div class="section-header-content">
+                <h2 class="section-title">Stellar products</h2>
+                <p class="section-subtitle">Manage subscriptions, devices and security for each app.</p>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <app-product-card *ngFor="let product of products$ | async" [product]="product"
+                (actionClick)="onProductAction($event)">
+            </app-product-card>
+
+            <!-- Placeholder Card -->
+            <article class="product-placeholder-card">
+                <div class="placeholder-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+                <div class="placeholder-content">
+                    <h3 class="placeholder-title">More Stellar tools coming soon</h3>
+                    <p class="placeholder-description">
+                        Future products like Stellar Mail or Stellar Drive will appear here automatically when they are
+                        added to your account.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer Note -->
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                Every Stellar app is built with the same security-first philosophy and Swiss privacy guarantees.
+            </p>
+            <p class="footer-meta">
+                Stellar Security · Switzerland · Zero-knowledge by design.
+            </p>
+        </div>
+    </footer>
+</div>

@@ -1,39 +1,45 @@
-<article class="card">
-    <div class="card-content">
-        <!-- Header: Icon, Name (Eyebrow), Status -->
-        <div class="card-header-top">
-            <div class="flex items-center gap-3">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24" class="icon-svg" [innerHTML]="product.icon | safeHtml"></svg>
-                </div>
-                <div>
-                    <p class="card-eyebrow">{{ product.name }}</p>
-                    <h3 class="card-title">{{ product.title }}</h3>
-                </div>
-            </div>
-            <!-- Status Badge (from content) -->
-            <div class="status-badge" [class.active]="product.status === 'Active'"
-                [class.enabled]="product.status === 'Enabled'">
-                <span class="badge-dot"></span>
-                {{ product.status }}
+<article class="product-card">
+    <!-- Card Header -->
+    <div class="card-header">
+        <div class="card-icon-wrapper">
+            <div class="card-icon">
+                <svg viewBox="0 0 24 24" class="icon-svg" [innerHTML]="product.icon | safeHtml"></svg>
             </div>
         </div>
+        <div class="status-badge" [class.status-active]="product.status === 'Active'"
+            [class.status-enabled]="product.status === 'Enabled'">
+            <span class="status-dot"></span>
+            <span>{{ product.status }}</span>
+        </div>
+    </div>
 
-        <!-- Description -->
+    <!-- Card Content -->
+    <div class="card-content">
+        <div class="card-title-section">
+            <span class="card-eyebrow">{{ product.name }}</span>
+            <h3 class="card-title">{{ product.title }}</h3>
+        </div>
+
         <p class="card-description">
             {{ product.description }}
         </p>
 
-        <!-- Device Info -->
-        <div class="device-info">
-            {{ product.deviceInfo }}
+        <div class="card-meta">
+            <div class="meta-item">
+                <i class="fa-solid fa-laptop"></i>
+                <span>{{ product.deviceInfo }}</span>
+            </div>
         </div>
     </div>
 
-    <!-- Footer Actions (Buttons) -->
-    <div class="card-actions">
-        <button *ngFor="let action of product.actions" class="btn-action" (click)="onActionClick(action.action)">
-            {{ action.label }}
+    <!-- Card Footer -->
+    <div class="card-footer">
+        <button *ngFor="let action of product.actions" 
+                class="card-action-btn"
+                [class.btn-primary]="action.action === 'manage'"
+                (click)="onActionClick(action.action)">
+            <span>{{ action.label }}</span>
+            <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
 </article>

@@ -13,7 +13,6 @@
     box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s ease;
-    overflow: hidden;
     z-index: var(--z-index-sticky);
 
     &.collapsed {
@@ -52,9 +51,9 @@
         .collapse-toggle {
             right: -14px;
 
-            i {
-                transform: rotate(180deg);
-            }
+            // i {
+            //     transform: rotate(180deg);
+            // }
         }
 
         .sign-out-btn {
@@ -84,7 +83,7 @@
 
     &:hover {
         background: linear-gradient(135deg, #ffffff 0%, #e8effe 100%);
-        transform: scale(1.15) rotate(90deg);
+        transform: scale(1.15);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
@@ -101,7 +100,7 @@
 // ===== SIDEBAR CONTENT =====
 .sidebar-content {
     flex: 1;
-    padding: var(--spacing-6) var(--spacing-4);
+    padding: var(--spacing-4) var(--spacing-4);
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -126,8 +125,7 @@
 
 // ===== BRAND HEADER =====
 .sidebar-header {
-    margin-bottom: var(--spacing-8);
-    padding: 0 var(--spacing-2);
+  padding: var(--spacing-4) var(--spacing-4);
 }
 
 .brand-container {
@@ -147,20 +145,6 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-lg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-        transform: translateY(-2px) scale(1.05);
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    svg {
-        width: 24px;
-        height: 24px;
-        filter: brightness(0) invert(1);
-    }
 }
 
 .brand-text {
@@ -507,11 +491,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(220, 38, 38, 0.15);
-    border: 1px solid rgba(220, 38, 38, 0.3);
+    background: #ffffff;
     border-radius: var(--radius-md);
-    color: #ff6b6b;
+    color: #f72a2a;
     cursor: pointer;
+    border: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {

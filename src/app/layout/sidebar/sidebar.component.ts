@@ -35,13 +35,10 @@ export class SidebarComponent {
     @Output() signOut = new EventEmitter<void>();
 
     isCollapsed = false;
-    isInfoBoxExpanded = false;
+    isInfoBoxExpanded = true;
 
     toggleSidebar(): void {
         this.isCollapsed = !this.isCollapsed;
-        if (this.isCollapsed) {
-            this.isInfoBoxExpanded = false;
-        }
     }
 
     toggleInfoBox(): void {
