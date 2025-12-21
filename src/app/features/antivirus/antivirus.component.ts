@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './antivirus.component.scss'
 })
 export class AntivirusComponent {
-
+breadcrumbs = ['Dashboard', 'Products & devices', 'Stellar Antivirus'];
 }
