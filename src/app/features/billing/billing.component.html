@@ -1,0 +1,241 @@
+<div class="breadcrumb-wrapper">
+    <nav class="breadcrumb">
+        <a href="#" class="breadcrumb-item">Dashboard</a>
+        <span class="breadcrumb-separator">/</span>
+
+        <a href="#" class="breadcrumb-item">Billing & invoices</a>
+    </nav>
+</div>
+<header class="page-header align-items-center">
+    <div class="header-content">
+        <h3 class="card-title">Billing & invoices</h3>
+        <h1 class="page-title">Manage your Stellar subscriptions</h1>
+        <p class="page-description">
+            All your Stellar products share the same Stellar ID. Each subscription can be managed, upgraded or cancelled from here.
+        </p>
+    </div>
+    <div class="header-actions">
+        <div class="status-badge status-active"><span class="status-dot"></span><span>
+Total monthly cost: €10.97</span></div>
+       
+    </div>
+</header>
+
+<div class="flex-main">
+<div class="cards product-card products-grid grid-template-none flex-8">
+    <div class="card-flex">
+        <div>
+              <h3 class="card-title">Your active subscriptions</h3>
+        <p>You can have multiple subscriptions under one Stellar ID. Each subscription is billed separately</p>
+        </div>
+         <span class="count-badge">3 active subscriptions</span>
+      
+    </div>
+    <div class="subscription-wrapper">
+
+ 
+
+  <!-- Card 1 -->
+  <div class="subscription-card mt-1">
+    <div class="card-left">
+      <span class="tag">STELLAR VPN</span>
+      <h4>Stellar VPN · Unlimited</h4>
+      <p class="price">€4.99 / month · Next billing: 12 Jan 2026</p>
+
+      <div class="actions">
+        <button class="btn">Manage VPN</button>
+        <button class="btn">Change plan</button>
+        <button class="btn danger">Cancel subscription</button>
+      </div>
+    </div>
+
+    <div class="card-right">
+      <span class="status active">● Active</span>
+      <p>Up to 5 devices</p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="subscription-card">
+    <div class="card-left">
+      <span class="tag">STELLAR ANTIVIRUS</span>
+      <h4>Stellar Antivirus · 3 devices</h4>
+      <p class="price">€3.99 / month · Next billing: 12 Jan 2026</p>
+
+      <div class="actions">
+        <button class="btn">Manage Antivirus</button>
+        <button class="btn">Change plan</button>
+        <button class="btn danger">Cancel subscription</button>
+      </div>
+    </div>
+
+    <div class="card-right">
+      <span class="status active">● Active</span>
+      <p>2 / 3 devices used</p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="subscription-card">
+    <div class="card-left">
+      <span class="tag">STELLAR PRIVATE NOTES</span>
+      <h4>Stellar Private Notes · Premium</h4>
+      <p class="price">€1.99 / month · Trial ends: 7 Feb 2026</p>
+
+      <div class="actions">
+        <button class="btn">Open Private Notes</button>
+        <button class="btn primary">Upgrade now</button>
+        <button class="btn danger">Cancel trial</button>
+      </div>
+    </div>
+
+    <div class="card-right">
+      <span class="status trial">● Trial</span>
+      <p>Renews automatically</p>
+    </div>
+  </div>
+<div class="cards product-card products-grid grid-template-none mt-10">
+    <div class="d-flex">
+        <h3 class="card-title">Payment methods</h3>
+         <div class="status-badge status-active">+ Add backup payment method</div>
+    </div>
+    <p class="section-subtitle  fs-1rem">Your primary payment method is used for all active subscriptions.</p>
+    <div class="table mt-10">
+        <table class="w-100">
+            <tbody>
+                <tr class="selected-tr">
+                    <td>
+                        <div class="product-flex">
+                            <div class="product-image">
+                                <img src="../../../assets/product.svg" alt="">
+                            </div>
+                            <div class="">
+                                <h5>Visa ending in 4027</h5>
+                            <p>Primary · Expires 04/28</p>
+                            </div>
+                            
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="status-btn-table">
+                    <div class="connection-badge">
+            Update card
+        </div>
+                        </div>
+                
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="fs-11">Stellar never stores full card numbers. All payments are processed via PCI-DSS compliant providers.</p>
+    </div>
+</div>
+</div>
+
+</div>
+<div class=" flex-4">
+<div class="billing-wrapper">
+
+  <!-- INVOICES CARD -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Invoices</h3>
+
+      <div class="filters">
+        <span>Filter:</span>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">VPN</button>
+        <button class="filter-btn">Antivirus</button>
+        <button class="filter-btn">Notes</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+           <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Invoice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12 Jan 2026</td>
+          <td>Stellar VPN</td>
+          <td>Stellar VPN · Unlimited · Monthly</td>
+          <td>€4.99</td>
+          <td><span class="badge paid">Paid</span></td>
+          <td><button class="pdf-btn">PDF ⬇</button></td>
+        </tr>
+
+        <tr>
+          <td>12 Jan 2026</td>
+          <td>Stellar Antivirus</td>
+          <td>Stellar Antivirus · 3 devices · Monthly</td>
+          <td>€3.99</td>
+          <td><span class="badge paid">Paid</span></td>
+          <td><button class="pdf-btn">PDF ⬇</button></td>
+        </tr>
+
+        <tr>
+          <td>12 Jan 2026</td>
+          <td>Private Notes</td>
+          <td>Stellar Private Notes · Premium · Monthly</td>
+          <td>€1.99</td>
+          <td><span class="badge paid">Paid</span></td>
+          <td><button class="pdf-btn">PDF ⬇</button></td>
+        </tr>
+
+        <tr>
+          <td>12 Dec 2025</td>
+          <td>Stellar VPN</td>
+          <td>Stellar VPN · Unlimited · Monthly</td>
+          <td>€4.99</td>
+          <td><span class="badge paid">Paid</span></td>
+          <td><button class="pdf-btn">PDF ⬇</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+ 
+
+    <p class="note">
+      Invoices are generated in EUR. You can use them for accounting or tax purposes.
+    </p>
+  </div>
+
+  <!-- TAX & BUSINESS DETAILS -->
+  <div class="card mt-1">
+    <div class="card-header space-between">
+      <h3>Tax & business details</h3>
+      <span class="muted">Customer type: Private</span>
+    </div>
+
+    <div class="info-box">
+      <p class="label">Billing country</p>
+      <p class="value">Denmark</p>
+      <p class="sub-text">VAT is included where required by EU rules.</p>
+    </div>
+
+    <div class="info-box">
+      <p class="label">Business invoices</p>
+      <p class="sub-text">
+        Add your company details to receive invoices with your VAT number.
+      </p>
+      <button class="status-badge status-active mt-10">Add business details</button>
+    </div>
+
+    <p class="note">
+      Billing data is stored securely in Switzerland. We never sell your payment or
+      billing information to advertisers or data brokers.
+    </p>
+  </div>
+
+</div>
+
+</div>
+</div>

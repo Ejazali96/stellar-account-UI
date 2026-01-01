@@ -1,51 +1,388 @@
-// Billing component uses global styles and product-card styles
-// Minimal additional styling needed
+.breadcrumb-wrapper {
+  padding-top: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  width: fit-content;
+}
 
-.billing-subscription-actions {
+.breadcrumb {
   display: flex;
-  gap: var(--spacing-2);
-  margin-top: var(--spacing-4);
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.breadcrumb-item {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item:hover {
+  color: #0052dc;
+}
+
+.breadcrumb-separator {
+  margin: 0 6px;
+  color: #adb5bd;
+}
+
+.breadcrumb-item.active {
+  color: #212529;
+  font-weight: 500;
+  cursor: default;
+}
+.card-title
+ {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-slate-900);
+    line-height: 1.3;
+    margin: 0;
+}
+.align-items-center{
+    align-items: center;
+}
+.status-active .status-enabled{
+    color: var(--color-emerald-700);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+.status-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    background: rgba(100, 116, 139, 0.08);
+    color: var(--color-slate-600);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    transition: all 0.2s ease;
+}
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: currentColor;
+    animation: _ngcontent-ng-c970734585_pulse 2s infinite;
+}
+.icon-svg{
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+.card-icon{
+    width: 28px;
+    height: 28px;
+    color: var(--color-primary);
+}
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.1) 0%, rgba(var(--color-primary-rgb), 0.05) 100%);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.1);
+}
+.status-active{
+    background: rgba(16, 185, 129, 0.08);
+    color: var(--color-emerald-700);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+.status-btn-table{
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+}
+.product-image{
+        width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       background: #e0fff7;
+    padding: 6px;
+    border-radius: 7px;
+    border: 1px solid #a4acaf;
+}
+.product-flex{
+        display: flex;
+    gap: 8px;
+}
+.selected-tr{
+      background: #f7fafc;
+}
+.table{
+    td{
+        padding: 8px;
+         &:first-child{
+             border-top-left-radius: 10px;
+             border-bottom-left-radius: 10px;
+         }
+        &:last-child{
+border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+         
+           
+    }
+}
+.card-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-8,
+.flex-4 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .flex-8 {
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
+
+  .flex-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+.flex-main{
+    display: flex;
+    gap: 1.5rem
+}
+.count-badge {
+  background: #e6f0ff;
+  color: #1a73e8;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.subscription-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e6edf3;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: 0.4s;
+}
+.subscription-card:hover{
+    background-color: #f7fafc;
+}
+.card-left {
+  flex: 0 0 70%;
+}
+
+.card-right {
+  flex: 0 0 30%;
+  text-align: right;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+.subscription-card h4 {
+  margin: 6px 0;
+}
+
+.price {
+  font-size: 14px;
+  color: #666;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
-// Invoice table specific styles
-.table {
-  thead {
-    background: #f9fafb;
-    border-bottom: 1px solid var(--color-slate-200);
-  }
-
-  tbody tr {
-    transition: background 0.2s ease;
-
-    &:hover {
-      background: #f9fafb;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--color-slate-100);
-    }
-  }
-
-  td,
-  th {
-    padding: var(--spacing-3);
-    font-size: var(--font-size-sm);
-  }
-
-  td {
-    color: var(--color-slate-700);
-  }
+.btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 18px;
+  border: 1px solid #d0d7de;
+  background: #fff;
+  cursor: pointer;
 }
 
-// Responsive adjustments
-@media (max-width: 768px) {
-  .table {
-    overflow-x: auto;
-    display: block;
+.btn.primary {
+  background: #1a73e8;
+  color: #fff;
+  border-color: #1a73e8;
+}
 
-    table {
-      min-width: 600px;
-    }
-  }
+.btn.danger {
+  color: #e53935;
+  border-color: #f5b5b5;
+}
+
+.status {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.status.active {
+  background: #e7f7ef;
+  color: #1e8e3e;
+}
+
+.status.trial {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.card-right p {
+  font-size: 13px;
+  color: #666;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+.fs-11{
+    font-size: 11px;
+}
+.table-responsive{
+    overflow: auto;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card-header.space-between {
+  justify-content: space-between;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.filters {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid #d0d7de;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #e6f0ff;
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.invoice-table th {
+  text-align: left;
+  font-weight: 500;
+  color: #8a9bb2;
+     padding: 4px 5px;
+    border-top: 1px solid #eef2f6;
+    font-size: 11px;
+}
+
+.invoice-table td {
+     padding: 4px 5px;
+    border-top: 1px solid #eef2f6;
+    font-size: 11px;    
+}
+
+.badge {
+     padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.badge.paid {
+  background: #e7f7ef;
+  color: #1e8e3e;
+}
+
+.pdf-btn {
+     border: 1px solid #d0d7de;
+    background: #fff;
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 10px;
+    cursor: pointer;
+
+}
+
+.info-box {
+  background: #f8fbfd;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.label {
+  font-size: 13px;
+  color: #6b7c93;
+  margin: 0;
+}
+
+.value {
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.sub-text {
+  font-size: 13px;
+  color: #6b7c93;
+  margin: 4px 0 0;
+}
+
+.primary-btn {
+  margin-top: 10px;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 12px;
+  color: #6b7c93;
+  margin-top: 12px;
+}
+
+.muted {
+  font-size: 13px;
+  color: #6b7c93;
 }
